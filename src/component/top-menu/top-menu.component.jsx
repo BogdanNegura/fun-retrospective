@@ -4,9 +4,10 @@ import * as TMS from "./top-menu.style"
 
 export const TopMenu = () => {
     return (
-        <nav>
-            <Link to="/">Acasa</Link>
-            <Link to="/despre">Despre</Link>
-        </nav>
+        <TMS.Nav>
+            <TMS.StyledLink to="/">Acasa</TMS.StyledLink>
+            <TMS.StyledLink to="/despre">Despre</TMS.StyledLink>
+            <TMS.StyledLink to="/dashboard">Dashboard</TMS.StyledLink>
+        </TMS.Nav>
     )
 }
