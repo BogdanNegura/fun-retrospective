@@ -6,3 +6,8 @@ export const StyledDeleteButton = styled(Button)`
   color: white !important;
   
 `
+
+export const StyledFormWrapper = styled.div`
+  display: grid;
+  grid-gap: 1rem;
+`

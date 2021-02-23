@@ -5,6 +5,7 @@ import { Login } from "../login"
 import { Welcome } from "../welcome/welcome.component"
 import { Despre } from "../about/about.component"
 import { Dashboard } from "../dashboard/dashboard.component"
+import { Room } from "../room/room.component"
  
 export const Retrospective = () => {
     return (
@@ -15,6 +16,7 @@ export const Retrospective = () => {
                 <Welcome path="/"/>
                 <Despre path="/despre"/>
                 <Dashboard path="/dashboard"/>
+                <Room path="/room/:dasta"/>
             </Router>
         </div>
     )
