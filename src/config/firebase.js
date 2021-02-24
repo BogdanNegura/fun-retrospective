@@ -1,5 +1,8 @@
+// import firebase from 'firebase'
+// ES Modules:
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+// import 'firebase/storage';
 import 'firebase/auth';
 
 const firebaseConfig = {
@@ -21,3 +24,5 @@ export const db = firebase.firestore()
 export const ts = firebase.firestore.FieldValue.serverTimestamp();
 export const auth = firebase.auth();
 export const GitHubProvider = new firebase.auth.GithubAuthProvider()
+// export const emailAndPassProvider = new firebase.auth.Auth.signInWithEmailAndPassword
+
