@@ -1,1 +1,1 @@
-export { Despre } from "./about.component"
+export { About } from "./about.component"

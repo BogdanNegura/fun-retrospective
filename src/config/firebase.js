@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "fun-retrospective-a8c33.appspot.com",
   messagingSenderId: "645991211375",
   appId: "1:645991211375:web:8b007f0f6dae9810e8c89a"
-}
+};
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
@@ -24,5 +24,5 @@ export const db = firebase.firestore()
 export const ts = firebase.firestore.FieldValue.serverTimestamp();
 export const auth = firebase.auth();
 export const GitHubProvider = new firebase.auth.GithubAuthProvider()
-// export const emailAndPassProvider = new firebase.auth.Auth.signInWithEmailAndPassword
+export const emailAndPassProvider = firebase.auth.Auth.signInWithEmailAndPassword
 

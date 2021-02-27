@@ -14,10 +14,10 @@ export const Dashboard = () => {
       .collection("ticket")
       .orderBy("ts", "asc")
       .onSnapshot(snapShot => {
-      setList(snapShot.docs.map(retrospective => ({
-        id: retrospective.id,
-        ...retrospective.data()
-      })))
+        setList(snapShot.docs.map(retrospective => ({
+          id: retrospective.id,
+          ...retrospective.data()
+        })))
     })
   }, [])
   

@@ -5,7 +5,7 @@ export const TopMenu = () => {
     return (
         <TMS.Nav>
             <TMS.StyledLink to="/">Acasa</TMS.StyledLink>
-            <TMS.StyledLink to="/despre">Despre</TMS.StyledLink>
+            <TMS.StyledLink to="/about">About</TMS.StyledLink>
             <TMS.StyledLink to="/dashboard">Dashboard</TMS.StyledLink>
         </TMS.Nav>
     )
