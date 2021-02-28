@@ -1,5 +1,6 @@
 import { Link } from "@reach/router"
 import styled from "styled-components"
+import { TopMenuOption } from "../topmenu-option/topmenu-option.component"
 
 export const StyledLink = styled(Link)`
     color: red;
@@ -16,5 +17,7 @@ export const StyledLink = styled(Link)`
 export const Nav = styled.nav`
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr auto auto ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* display: flex;
+    justify-content: center; */
 `

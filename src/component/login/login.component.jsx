@@ -88,23 +88,27 @@ export const Login = () => {
 
   return (
     <LS.StyledLoginWrapper>
-      <form >
-        <div>
-          <TextField type="text" placeholder="email" onChange={e => setEmail(e.target.value)}/>
-        </div>
-        <div>
-          <TextField type="password" placeholder="password" onChange={e => setPassword(e.target.value)}/>
-        </div>
-        <div>
-          {!user && <div><Button type="submit" variant="contained" color="primary" onClick={logInWithEmail}>Login</Button></div>}
-          {user && <div><Button type="submit" variant="contained" color="primary" onClick={logout}>Logout</Button></div>}
-        </div>
-      </form>
-      <p>
-        Not a member?{""}
-        <span onClick={register}>Register now</span>
-      </p>
-      <div><GitHubIcon /></div>
+      <LS.StyledLeftLoginWrapper>
+        <h1>Login</h1>
+        <form>
+          <div>
+            <LS.StyledEmailTextField type="text" placeholder="Email" onChange={e => setEmail(e.target.value)}/>
+          </div>
+          <div>
+            <LS.StyledEmailTextField type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
+          </div>
+          <LS.StyledLoginFormButtonWrapper>
+            {!user && <div><LS.StyledLoginButton type="submit" variant="contained" color="primary" onClick={logInWithEmail}>Login</LS.StyledLoginButton></div>}
+            {user && <div><LS.StyledLoginButton type="submit" variant="contained" color="primary" onClick={logout}>Logout</LS.StyledLoginButton></div>}
+          </LS.StyledLoginFormButtonWrapper>
+        </form>
+        <LS.StyledLoginRegister>
+          Not a member?{""}
+          <span onClick={register}>Register now</span>
+        </LS.StyledLoginRegister>
+      </LS.StyledLeftLoginWrapper>
+      <h2>or</h2>
+      <LS.StyledLGithubButton><LS.StyledGithubIcon />Login with Github</LS.StyledLGithubButton>
     </LS.StyledLoginWrapper>
   )
 }

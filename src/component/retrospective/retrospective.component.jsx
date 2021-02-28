@@ -9,6 +9,7 @@ import { About } from "../about"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import { auth } from "../../config/firebase"
+import * as RETROSTYLE from "./retrospective.style"
  
 export const Retrospective = () => {
     const user = useSelector((state) => state.userReducer)
@@ -31,15 +32,20 @@ export const Retrospective = () => {
 
     return (
       <div className="app">
-        <TopMenu />
         {!user.logged ? 
-          <Login path="/login" /> :
-            <Router>
-              <Welcome path="/" />
-              <About path="/about"/>
-              <Dashboard path="/dashboard" />
-              <Room path="/room/:dasta" />
-            </Router>
+          <RETROSTYLE.StyledIntroLogin>
+            <About path="/about"/>
+            <Login path="/login" />
+          </RETROSTYLE.StyledIntroLogin>
+          :
+            <>
+              <TopMenu />
+              <Router>
+                <Welcome path="/" />
+                <Dashboard path="/dashboard" />
+                <Room path="/room/:dasta" />
+              </Router>
+            </>
         }
       </div>
     )
