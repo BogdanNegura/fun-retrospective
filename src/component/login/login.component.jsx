@@ -21,6 +21,7 @@ export const Login = () => {
   const dispatch = useDispatch()
 
   const logInWithEmail = (e) => {
+    console.log("%cTHIS is %cRED", "color: red; font-size: 4rem", "color: blue");
     e.preventDefault()
     auth.signInWithEmailAndPassword(email, password).then(res => {
       const userObject = {
@@ -29,14 +30,13 @@ export const Login = () => {
         displayName: res.user.displayName,
         photoURL: res.user.photoURL
       }
-      console.log(userObject);
+      console.table(userObject);
       dispatch(isLoggedIn())
       dispatch(setUserInfo(userObject))
     })
   }
 
   const loginToApp = () => {
-    
     console.log('...............................');
     auth
     .signInWithPopup(GitHubProvider)
